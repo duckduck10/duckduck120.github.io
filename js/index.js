@@ -21,7 +21,7 @@
             var text = texts[textIndex]
             updateText(text)
             textIndex = (textIndex + 1) % (texts.length)
-        }, 500)
+        }, 1000)
         timer && clearInterval(time);
         timer = setInterval(() => {
             var text = texts[textIndex]
@@ -127,7 +127,6 @@
     }
 
     function formText() {
-    	console.log(circles, textPixels)
         for(var i= 0, l=textPixels.length; i<l; i++) {
             circles[i].originX = offsetX + textPixels[i].x;
             circles[i].originY = offsetY + textPixels[i].y;
